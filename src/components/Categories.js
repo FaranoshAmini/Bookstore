@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Categories = () => {
+function Categories() {
   return (
     <div>
       <button>
@@ -8,6 +8,6 @@ const Categories = () => {
       </button>
     </div>
   );
-};
+}
 
 export default Categories;
