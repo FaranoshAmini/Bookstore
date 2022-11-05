@@ -29,7 +29,9 @@ function BooksList() {
         books.map((book) => (
           <Book
             key={book.id}
-            book={book}
+            title={book.title}
+            author={book.author}
+            category={book.category}
           />
         ))
       }

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Book({
-  id, title, author, category,
-}) {
+function Book(props) {
+  const {
+    title, author, category,
+  } = props;
   return (
-    <div className="book-div" id={id}>
+    <div className="book-div">
 
       <div className="book-info">
         <div>
@@ -36,7 +37,6 @@ function Book({
 }
 
 Book.propTypes = {
-  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
