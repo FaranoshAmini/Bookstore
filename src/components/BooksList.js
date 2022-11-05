@@ -38,3 +38,5 @@ function BooksList() {
     </section>
   );
 }
+
+export default BooksList;
