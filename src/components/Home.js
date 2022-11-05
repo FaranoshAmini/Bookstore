@@ -1,6 +1,6 @@
 import React from 'react';
 import BookForm from './BookForm';
-import BooksList from './BooksList';
+import BooksList from './BooksList.js';
 
 const Home = () => (
   <main className="home-main">
