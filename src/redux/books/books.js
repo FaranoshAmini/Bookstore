@@ -7,21 +7,21 @@ const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const initialState = [
   {
     id: '1',
-    title: 'The hunger games',
-    author: 'Suzanne Collins',
-    category: 'Action',
+    title: 'Crying in H Mart: A Memoir',
+    author: 'Michelle Zauner',
+    category: 'musician',
   },
   {
     id: '2',
-    title: 'Dune',
-    author: 'Frank Herbert',
-    category: 'Science Fiction',
+    title: 'The Prophets',
+    author: 'Robert Jones',
+    category: 'Novel',
   },
   {
     id: '3',
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-    category: 'Economy',
+    title: 'The Hill We Climb',
+    author: 'Amanda Gorman',
+    category: 'poem',
   },
 ];
 
