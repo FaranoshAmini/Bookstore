@@ -3,8 +3,7 @@
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-// eslint-disable-next-line no-undef
-const initialState = [{ id, title, author }, {}, {}];
+const initialState = [];
 const bookId = 0;
 
 // REDUCER
