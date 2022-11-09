@@ -16,3 +16,20 @@ const booksReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+// ACTIONS CREATOR
+export const addBook = (title, author) => ({
+  type: ADD_BOOK,
+  paylod: {
+    id: bookId + 1,
+    title,
+    author,
+  },
+});
+
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  payload: {
+    id,
+  },
+});
