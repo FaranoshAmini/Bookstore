@@ -29,7 +29,7 @@ function Book(props) {
 
       <div className="book-chapter">
         <p>Current chapter</p>
-        <p>chapter 17</p>
+        <p>chapter 20</p>
         <button type="button">Update Progress</button>
       </div>
     </div>

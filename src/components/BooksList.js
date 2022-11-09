@@ -4,21 +4,21 @@ function BooksList() {
   const books = [
     {
       id: 1,
-      title: 'The hunger games',
-      author: 'Suzanne Collins',
-      category: 'Action',
+      title: 'Hear Yourself',
+      author: 'Prem Rawat',
+      category: 'Motivational',
     },
     {
       id: 2,
-      title: 'Dune',
-      author: 'Frank Herbert',
-      category: 'Science Fiction',
+      title: 'Business of Sports: The Winning Formula for Success',
+      author: 'Vinit Karnik',
+      category: 'Motivational',
     },
     {
       id: 3,
-      title: 'Capital in the Twenty-First Century',
-      author: 'Suzanne Collins',
-      category: 'Economy',
+      title: 'Great American Hero',
+      author: 'Marian Anderson',
+      category: 'Historical',
     },
   ];
 
