@@ -7,7 +7,6 @@ const requestedURL = `${baseURL}/apps/${apiKey}/books`;
 // ACTIONS
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
-
 const DISPLAY_BOOKS = 'bookstore/books/DISPLAY_BOOKS';
 const initialState = [];
 
