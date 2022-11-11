@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux/es/exports';
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/books';
 
-function Book(props) {
+// eslint-disable-next-line react/function-component-definition
+const Book = (props) => {
   const {
     id, title, author, category,
   } = props;
@@ -16,6 +17,7 @@ function Book(props) {
 
   return (
     <div className="book-div" id={id}>
+
       <div className="book-info">
         <div>
           <p>{category}</p>
@@ -28,19 +30,21 @@ function Book(props) {
           <button type="button">Edit</button>
         </div>
       </div>
+
       <div className="book-status">
         <div className="status-circle" />
-        <p>64%</p>
+        <p>85%</p>
         <p>Completed</p>
       </div>
+
       <div className="book-chapter">
         <p>Current chapter</p>
-        <p>chapter 17</p>
+        <p>chapter 20</p>
         <button type="button">Update Progress</button>
       </div>
     </div>
   );
-}
+};
 
 Book.propTypes = {
   id: PropTypes.string.isRequired,
@@ -48,4 +52,5 @@ Book.propTypes = {
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
 };
+
 export default Book;

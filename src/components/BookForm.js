@@ -3,7 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
-function BookForm() {
+// eslint-disable-next-line react/function-component-definition
+const BookForm = () => {
   const dispatch = useDispatch();
 
   const handleAddBook = (e) => {
@@ -14,6 +15,7 @@ function BookForm() {
       author: e.target.author.value,
       category: 'Action',
     };
+
     if (book.title && book.author) {
       dispatch(addBook(book));
       e.target.reset();
@@ -34,5 +36,6 @@ function BookForm() {
       </form>
     </section>
   );
-}
+};
+
 export default BookForm;

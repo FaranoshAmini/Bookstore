@@ -11,6 +11,7 @@ const DISPLAY_BOOKS = 'bookstore/books/DISPLAY_BOOKS';
 const initialState = [];
 
 // REDUCER
+// eslint-disable-next-line default-param-last
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case DISPLAY_BOOKS:
