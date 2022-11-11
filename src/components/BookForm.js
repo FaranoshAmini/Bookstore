@@ -28,12 +28,13 @@ function BookForm() {
     <section className="book-form">
       <h2>Add a Book</h2>
       <form onSubmit={handleAddBook}>
-        <input type="text" name="title" placeholder="Enter name of the book" onClick={handleInput} />
+        <input type="text" name="title" placeholder="Enter name of the book" onChange={handleInput} value={title} />
         <input
           type="text"
           name="author"
           placeholder="Enter name of the author"
-          onClick={handleInput}
+          onChange={handleInput}
+          value={author}
         />
         <button type="submit">Add Book</button>
       </form>
