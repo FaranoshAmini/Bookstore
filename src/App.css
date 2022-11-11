@@ -82,14 +82,24 @@ body {
 }
 
 .book-div {
-  border: 1px solid #000;
   display: flex;
+  border: 1px solid #e8e8e8;
+  border-radius: 0.2rem;
+  background-color: #fff;
   justify-content: space-between;
-  padding: 1rem 0.8rem;
+  padding: 1.5rem 2rem;
 }
 
 .book-info {
   width: 45%;
+  text-transform: capitalize;
+}
+
+.book-category {
+  color: #121212;
+  opacity: 0.6;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .book-status {
