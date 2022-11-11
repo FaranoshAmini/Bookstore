@@ -1,15 +1,12 @@
 const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
 const apiKey = 'vEEu5G5Iqrs3wYfAbg4u';
 const requestedURL = `${baseURL}/apps/${apiKey}/books`;
-
 // ACTIONS
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const DISPLAY_BOOKS = 'bookstore/books/DISPLAY_BOOKS';
-
 const initialState = [];
-
-// // REDUCER
+// REDUCER
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case DISPLAY_BOOKS:
@@ -22,7 +19,6 @@ const booksReducer = (state = initialState, action) => {
       return state;
   }
 };
-
 // ACTIONS CREATOR
 export const displayBooks = () => async (dispatch) => {
   const response = await fetch(requestedURL);
@@ -43,7 +39,6 @@ export const displayBooks = () => async (dispatch) => {
     });
   }
 };
-
 export const addBook = (id, title, author, category) => async (dispatch) => {
   const book = {
     item_id: id,
@@ -51,7 +46,6 @@ export const addBook = (id, title, author, category) => async (dispatch) => {
     author,
     category,
   };
-
   await fetch(requestedURL, {
     method: 'POST',
     body: JSON.stringify(book),
@@ -64,3 +58,24 @@ export const addBook = (id, title, author, category) => async (dispatch) => {
       },
     }));
 };
+
+export const removeBook = (id) => async (dispatch) => {
+  const url = `${requestedURL}/${id}`;
+  const response = await fetch(url, {
+    method: 'DELETE',
+    body: JSON.stringify({ item_id: id }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  if (response.status === 201) {
+    dispatch({
+      type: REMOVE_BOOK,
+      payload: {
+        id,
+      },
+    });
+  }
+};
+
+export default booksReducer;

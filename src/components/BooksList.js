@@ -10,7 +10,6 @@ function BooksList() {
     dispatch(displayBooks());
   }, []);
   const books = useSelector((state) => state.books);
-  console.log(books);
   return (
     <section className="book-list">
       <h2>List of Books</h2>
