@@ -46,6 +46,10 @@ body {
   text-transform: uppercase;
 }
 
+.navbar a:hover {
+  opacity: 1;
+}
+
 .home-main {
   display: flex;
   flex-direction: column;
