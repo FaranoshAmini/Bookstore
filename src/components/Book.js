@@ -3,14 +3,15 @@ import { useDispatch } from 'react-redux/es/exports';
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/books';
 
-function Book(props) {
+// eslint-disable-next-line react/function-component-definition
+const Book = (props) => {
   const {
     id, title, author, category,
   } = props;
 
   const dispatch = useDispatch();
 
-  const handleRemoveBook = () => {
+  const handleRemoveBook = (id) => {
     dispatch(removeBook(id));
   };
 
@@ -25,14 +26,14 @@ function Book(props) {
         </div>
         <div className="book-btns">
           <button type="button">Comments</button>
-          <button type="button" onClick={handleRemoveBook}>Remove</button>
+          <button type="button" onClick={() => handleRemoveBook(id)}>Remove</button>
           <button type="button">Edit</button>
         </div>
       </div>
 
       <div className="book-status">
         <div className="status-circle" />
-        <p>64%</p>
+        <p>85%</p>
         <p>Completed</p>
       </div>
 
@@ -43,7 +44,7 @@ function Book(props) {
       </div>
     </div>
   );
-}
+};
 
 Book.propTypes = {
   id: PropTypes.string.isRequired,

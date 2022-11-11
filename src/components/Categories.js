@@ -2,7 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
 
-function Categories() {
+// eslint-disable-next-line react/function-component-definition
+const Categories = () => {
   const categoriesStatus = useSelector((state) => state.categories);
   const dispatch = useDispatch();
 
@@ -18,6 +19,5 @@ function Categories() {
       <p>{categoriesStatus}</p>
     </div>
   );
-}
-
+};
 export default Categories;
