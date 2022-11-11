@@ -39,6 +39,13 @@ body {
   gap: 2rem;
 }
 
+.navbar a {
+  color: #121212;
+  opacity: 0.5;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
 .home-main {
   display: flex;
   flex-direction: column;
