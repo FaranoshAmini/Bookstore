@@ -165,4 +165,37 @@ body {
 
 .book-chapter {
   width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.book-chapter .current-chapter {
+  color: #121212;
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.book-chapter .chapter-number {
+  color: #121212;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.05rem;
+}
+
+.book-chapter .btn-update-progress {
+  border: none;
+  border-radius: 0.1rem;
+  background-color: #0290ff;
+  color: #fff;
+  padding: 0.5rem 1.4rem;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
 }
