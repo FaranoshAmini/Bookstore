@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
 const apiKey = 'vEEu5G5Iqrs3wYfAbg4u';
 const requestedURL = `${baseURL}/apps/${apiKey}/books`;
@@ -9,10 +7,9 @@ const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const DISPLAY_BOOKS = 'bookstore/books/DISPLAY_BOOKS';
 
-const initialState = [
-];
+const initialState = [];
 
-// REDUCER
+// // REDUCER
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case DISPLAY_BOOKS:
@@ -47,13 +44,14 @@ export const displayBooks = () => async (dispatch) => {
   }
 };
 
-export const addBook = (title, author) => async (dispatch) => {
+export const addBook = (id, title, author, category) => async (dispatch) => {
   const book = {
-    item_id: uuidv4(),
+    item_id: id,
     title,
     author,
-    category: 'Action',
+    category,
   };
+
   await fetch(requestedURL, {
     method: 'POST',
     body: JSON.stringify(book),
@@ -61,46 +59,8 @@ export const addBook = (title, author) => async (dispatch) => {
   })
     .then(() => dispatch({
       type: ADD_BOOK,
-      payload: book,
+      payload: {
+        id, title, author, category,
+      },
     }));
 };
-
-export const removeBook = (id) => async (dispatch) => {
-  const url = `${requestedURL}/${id}`;
-  console.log('URL: ', url);
-  console.log('ID: ', id);
-  const response = await fetch(url, {
-    method: 'DELETE',
-    body: JSON.stringify({ item_id: id }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  });
-  console.log('Response: ', response);
-  dispatch({
-    type: REMOVE_BOOK,
-    payload: {
-      id,
-    },
-  });
-};
-
-export default booksReducer;
-await fetch(requestedURL, {
-  method: 'POST',
-  body: JSON.stringify(book),
-  headers: { 'Content-type': 'application/json; charset=UTF-8' },
-})
-  .then(() => dispatch({
-    type: ADD_BOOK,
-    payload: book,
-  }));
-
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  payload: {
-    id,
-  },
-});
-
-export default booksReducer;
