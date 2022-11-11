@@ -108,6 +108,12 @@ body {
   font-size: 1.5rem;
 }
 
+.book-author {
+  color: #4386bf;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
 .book-status {
   width: 25%;
 }
