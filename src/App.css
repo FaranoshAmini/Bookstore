@@ -29,6 +29,10 @@ body {
   padding: 1rem 2rem;
 }
 
+.header h1 {
+  color: #0290ff;
+  font-weight: 700;
+}
 
 .navbar {
   display: flex;
