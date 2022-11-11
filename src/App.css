@@ -16,12 +16,19 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+#root {
+  background-color: #fafafa;
+}
+
 .header {
   display: flex;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
+  background-color: #fff;
+  padding: 1rem 2rem;
 }
+
 
 .navbar {
   display: flex;
