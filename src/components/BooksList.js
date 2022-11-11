@@ -9,7 +9,7 @@ const BooksList = () => {
 
   useEffect(() => {
     dispatch(displayBooks());
-  }, [ ]);
+  }, []);
   const books = useSelector((state) => state.books);
   return (
     <section className="book-list">
