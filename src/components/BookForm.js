@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
-function BookForm() {
+// eslint-disable-next-line react/function-component-definition
+const BookForm = () => {
   const dispatch = useDispatch();
 
   const [title, setTitle] = useState('');
