@@ -6,9 +6,14 @@
   padding: 0;
 }
 
-.App {
-  text-align: center;
-  padding: 1rem;
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f5f6fa;
+  padding: 5%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header {
