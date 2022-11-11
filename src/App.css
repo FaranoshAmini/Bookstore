@@ -114,6 +114,29 @@ body {
   font-size: 0.8rem;
 }
 
+.book-btns {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.book-btns button {
+  background: transparent;
+  border: none;
+  color: #4386bf;
+  cursor: pointer;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.book-btns .btn-divider {
+  width: 0.15rem;
+  height: 1.2rem;
+  margin: 0 1rem;
+  background-color: #e8e8e8;
+}
+
 .book-status {
   width: 25%;
 }
