@@ -1,27 +1,16 @@
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
+import { displayBooks } from '../redux/books/books';
 
 function BooksList() {
-  const books = [
-    {
-      id: 1,
-      title: 'Hear Yourself',
-      author: 'Prem Rawat',
-      category: 'Motivational',
-    },
-    {
-      id: 2,
-      title: 'Business of Sports: The Winning Formula for Success',
-      author: 'Vinit Karnik',
-      category: 'Motivational',
-    },
-    {
-      id: 3,
-      title: 'Great American Hero',
-      author: 'Marian Anderson',
-      category: 'Historical',
-    },
-  ];
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(displayBooks());
+  }, []);
+  const books = useSelector((state) => state.books);
+  console.log(books);
   return (
     <section className="book-list">
       <h2>List of Books</h2>
@@ -29,6 +18,7 @@ function BooksList() {
         books.map((book) => (
           <Book
             key={book.id}
+            id={book.id}
             title={book.title}
             author={book.author}
             category={book.category}
