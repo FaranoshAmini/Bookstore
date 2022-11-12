@@ -5,6 +5,7 @@ import { displayBooks } from '../redux/books/books';
 // eslint-disable-next-line react/function-component-definition
 const BooksList = () => {
   const dispatch = useDispatch();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     dispatch(displayBooks());
   }, []);
