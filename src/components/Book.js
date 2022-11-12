@@ -2,8 +2,6 @@ import React from 'react';
 import { Progress } from 'antd';
 import { useDispatch } from 'react-redux/es/exports';
 import PropTypes from 'prop-types';
-// eslint-disable-next-line no-unused-vars
-import domAlign from 'dom-align';
 import { removeBook } from '../redux/books/books';
 
 // eslint-disable-next-line react/function-component-definition
